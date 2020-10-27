@@ -6,6 +6,7 @@ export default class Jumbotron extends Component {
         return (
             <div>
                 <JumbotronContent />
+                I AM A NEW THING
             </div>
         )
     }
