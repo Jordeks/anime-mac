@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 
+Dark Primary Color: #E64A19
+rgba(230, 74, 25)
+
+Light Primary Color: #FFCCBC
+rgba(255, 204, 188)
+
+Primary Color: #FF5722
+Text/Icons: #FFFFFF
+
+Accent Color: #FF9800
+Primary Text: #212121
+Secondary Text: #757575
+Divider Color: #BDBDBD
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+html {
+  font-size: 62.5%; }
+
+  .home-div {
+    background-image: linear-gradient(to right bottom, rgba(230, 74, 25, 0.7), rgba(255, 204, 188, 0.7)), url(./img/home-image.jpg);
+    background-size: cover;
+    position: relative;
+    height: 95vh;
+  }

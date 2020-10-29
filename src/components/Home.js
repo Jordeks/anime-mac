@@ -5,7 +5,7 @@ import Title from './Title'
 export default class Home extends Component {
     render() {
         return (
-            <div id='home-div'>
+            <div className='home-div'>
                 <Title />
                 <Jumbotron />
             </div>
