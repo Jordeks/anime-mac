@@ -4,7 +4,7 @@ import JumbotronContent from './JumbotronContent'
 export default class Jumbotron extends Component {
     render() {
         return (
-            <div>
+            <div className='jumbotron'>
                 <JumbotronContent />
             </div>
         )

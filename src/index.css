@@ -1,15 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #FFFFFF;
+  padding: 2rem;
 }
 
 /* 
@@ -26,6 +21,8 @@ Accent Color: #FF9800
 Primary Text: #212121
 Secondary Text: #757575
 Divider Color: #BDBDBD
+
+FONT 400,500,600,700
 */
 
 *,
@@ -33,13 +30,88 @@ Divider Color: #BDBDBD
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit; 
+}
+
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%; 
+}
+
+ .nav-btn{ 
+  border-radius: 1.5rem;
+  border: none; 
+  padding: 0rem 1.5rem;
+  margin: 1rem; 
+  background-color: #E64A19;
+  color: #FFFFFF;
+  font-family: 'Baloo Tammudu 2', cursive;
+ }
+
+ .nav-btn:hover {
+  background-color: #FF5722;
+  color: #FFFFFF;
+  box-shadow: 0 1rem 2rem rgba(33, 33, 33, .40);
+  transform: translateY(-2px);
+ }
+
+ .nav-btn:active {
+  box-shadow: 0 1rem 1rem rgba(33, 33, 33, 0.25);
+  transform: translateY(0);
+ }
 
   .home-div {
     background-image: linear-gradient(to right bottom, rgba(230, 74, 25, 0.7), rgba(255, 204, 188, 0.7)), url(./img/home-image.jpg);
     background-size: cover;
     position: relative;
     height: 95vh;
+  }
+
+  .title-div {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #FFFFFF;
+    text-transform: lowercase;
+  }
+
+  .jumbotron {
+    margin-top: 10rem
+  }
+
+  .jumbotron-primary {
+    font-size: 2rem; 
+    letter-spacing: 2px;
+  }
+
+  .jumbotron-secondary {
+    font-size: 1.5rem; 
+    letter-spacing: 1.5px;
+  }
+
+  .jumbotron-tertiary {
+    font-size: 1.5rem; 
+    letter-spacing: 1.5px;
+  }
+
+  .submit-message-form {
+    display: block;
+  }
+
+  .form-textarea {
+    width: 50%;
+  }
+
+  .submit-btn{ 
+    border-radius: 1.5rem;
+    border: none;
+    margin-left: 1rem;
+    padding: 0rem 1.5rem;
+    background-color: #E64A19;
+    color: #FFFFFF;
+    font-family: 'Baloo Tammudu 2', cursive;
+   }
+  
+
+  .messages-div {
+    color: #757575;
   }

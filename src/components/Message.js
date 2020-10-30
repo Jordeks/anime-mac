@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PostList from './PostList'
-import PostForm from './PostForm'
+import MessageForm from './MessageForm'
 
-export default class Post extends Component {
+export default class Message extends Component {
 
   constructor() {
     super()
@@ -26,8 +26,8 @@ export default class Post extends Component {
     return (
       <div>
         {/* <PostForm listPosts={this.listOfPosts} /> */}
-        <PostForm />
-
+        <MessageForm />
+        
         {/* <PostList posts={this.state.posts} /> */}
       </div>
     )

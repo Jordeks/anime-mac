@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class PostForm extends Component {
+export default class MessageForm extends Component {
 
   constructor(){
     super()
@@ -28,19 +28,19 @@ export default class PostForm extends Component {
 
   listOfSubmissions = () => {
     return this.state.posts.map(data => {
-      return <div>{data.post}</div>
+      return <div className='messages-div'>{data.post}</div>
     })
   }
 
   render() {
     return (
       <>
-      <form className="submit-post-form" onSubmit={this.handleSubmit}>
-        <textarea
+      <form className="submit-message-form" onSubmit={this.handleSubmit}>
+        <textarea className='form-textarea'
               onChange={this.handleChange}
               value={this.state.post}
               placeholder="Type your message and click submit" />
-        <input type="submit" value="Submit" />
+        <input className='submit-btn' type="submit" value="Submit" />
       </form>
       {this.listOfSubmissions()}
     </>

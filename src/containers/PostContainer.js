@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Post from '../components/Post'
+import Message from '../components/Message'
 
 export default class PostContainer extends Component {
   render() {
     return (
       <div>
-        <Post />
+        <Message />
       </div>
     )
   }

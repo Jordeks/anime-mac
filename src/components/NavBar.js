@@ -30,8 +30,8 @@ export default class NavBar extends Component {
     return (
       <div>
          <nav>
-          <button id="home-btn" onClick={this.onButtonClick}>Home</button>
-          <button id="posts-btn" onClick={this.onPostClick}>Posts</button>
+          <button className="nav-btn" onClick={this.onButtonClick}>Home</button>
+          <button className="nav-btn" onClick={this.onPostClick}>Message</button>
           {this.state.showHome ? <Home /> : null }
           {this.state.showPosts ? <PostContainer /> : null }
         </nav>
