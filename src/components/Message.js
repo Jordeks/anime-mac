@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PostList from './PostList'
+import MessageList from './MessageList'
 import MessageForm from './MessageForm'
 
 export default class Message extends Component {
@@ -7,7 +7,7 @@ export default class Message extends Component {
   constructor() {
     super()
     this.state = {
-      posts: []
+      messages: []
     }
   }
 
@@ -28,7 +28,7 @@ export default class Message extends Component {
         {/* <PostForm listPosts={this.listOfPosts} /> */}
         <MessageForm />
         
-        {/* <PostList posts={this.state.posts} /> */}
+        {/* <MessageList posts={this.state.messages} /> */}
       </div>
     )
   }

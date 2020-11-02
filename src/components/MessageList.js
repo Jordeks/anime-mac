@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class PostList extends Component {
+export default class MessageList extends Component {
   render() {
     return (
       <ul>
-        hello from post list
+        hello from message list
       </ul>
     )
   }

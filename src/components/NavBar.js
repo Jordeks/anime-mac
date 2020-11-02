@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Home from './Home'
-import PostContainer from '../containers/PostContainer'
+import MessageContainer from '../containers/MessageContainer'
 
 export default class NavBar extends Component {
   
@@ -33,7 +33,7 @@ export default class NavBar extends Component {
           <button className="nav-btn" onClick={this.onButtonClick}>Home</button>
           <button className="nav-btn" onClick={this.onPostClick}>Message</button>
           {this.state.showHome ? <Home /> : null }
-          {this.state.showPosts ? <PostContainer /> : null }
+          {this.state.showPosts ? <MessageContainer /> : null }
         </nav>
       </div>
     )
