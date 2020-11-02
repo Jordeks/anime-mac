@@ -1,41 +1,39 @@
-import React, { Component } from 'react'
-import Home from './Home'
-import MessageContainer from '../containers/MessageContainer'
+import React from 'react'
+import { NavLink } from 'react-router-dom';
 
-export default class NavBar extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      showHome: false,
-      showPosts: false,
-    };
-  }
-
-  onButtonClick = () => {
-    this.setState({
-      showHome: true,
-      showPosts: false,
-    });
-  }
-
-  onPostClick = () => {
-    this.setState({
-      showPosts: true,
-      showHome: false,
-    });
-  }
-
-  render() {
-    return (
-      <div>
-         <nav>
-          <button className="nav-btn" onClick={this.onButtonClick}>Home</button>
-          <button className="nav-btn" onClick={this.onPostClick}>Message</button>
-          {this.state.showHome ? <Home /> : null }
-          {this.state.showPosts ? <MessageContainer /> : null }
-        </nav>
-      </div>
-    )
-  }
+const link = {
+  width: '100px',
+  padding: '12px',
+  margin: '0 6px 6px',
+  background: 'blue',
+  textDecoration: 'none',
+  color: 'white',
 }
+
+const NavBar = () => {
+  return (
+    <div className="navbar">
+      <NavLink
+          to="/"
+          exact
+          style={link}
+          activeStyle={{
+            background: 'darkblue'
+          }}
+        >Home</NavLink>
+
+        <NavLink
+          to="/messages"
+          exact
+          style={link}
+          activeStyle={{
+            background: 'darkblue'
+          }}
+        >Messages</NavLink>
+
+    </div>
+  );
+};
+
+export default NavBar;
+
