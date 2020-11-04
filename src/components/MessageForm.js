@@ -2,33 +2,23 @@ import React, { Component } from 'react'
 
 export default class MessageForm extends Component {
 
-  constructor(){
-    super()
-    this.state = {
-      message: '',
-      messages: [],
+ state = {
+      user: '',
+      text: '',
     }
-  }
+  
 
   handleChange = event => {
-    this.setState({
-      message: event.target.value
-    })
+    const {name, value} = event.target
+    this.setState({[name]: value})
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    let formData = { message: this.state.message}
-    let dataArray = this.state.messages.concat(formData)
+    this.props.addMessage(this.state)
     this.setState({
-      message: '',
-      messages: dataArray
-    })
-  }
-
-  listOfSubmissions = () => {
-    return this.state.messages.map(data => {
-      return <div className='messages-div'>{data.message}</div>
+      user: '',
+      text: ''
     })
   }
 
@@ -36,13 +26,17 @@ export default class MessageForm extends Component {
     return (
       <>
       <form className="submit-message-form" onSubmit={this.handleSubmit}>
-        <textarea className='form-textarea'
-              onChange={this.handleChange}
-              value={this.state.message}
-              placeholder="Type your message and click submit" />
-        <input className='submit-btn' type="submit" value="Submit" />
-      </form>
-      {this.listOfSubmissions()}
+        <label>
+          User:
+          <input type="text" name="user" value={this.state.user} onChange={this.handleChange} />
+        </label><br/>
+        <label>
+          Message:
+          <input type="text" name="text" value={this.state.text} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+    </form>
+  
     </>
     )
   }
