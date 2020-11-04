@@ -33,10 +33,10 @@ export default class MessageContainer extends Component {
 
   render() {
     return (
-      <div>
-        <MessageForm addMessage={this.addMessage} />
+      <>
         <MessageList messages={this.state.messages} />
-      </div>
+        <MessageForm addMessage={this.addMessage} />
+      </>
     )
   }
 }

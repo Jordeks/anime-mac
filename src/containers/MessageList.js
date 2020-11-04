@@ -5,7 +5,7 @@ function MessageList(props){
   return (
   <div className='messages-div'>
     <h3> Latest Messages:</h3>
-      <ul>
+      <ul className='message-list'>
         {props.messages.map(message => <Message text={message.text} user={message.user} key={message.id} />)}
       </ul>
   </div>

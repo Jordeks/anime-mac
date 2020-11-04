@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import animegirl from "../img/animegirl.jpg"
 
 export default class MessageForm extends Component {
 
@@ -24,20 +25,23 @@ export default class MessageForm extends Component {
 
   render() {
     return (
-      <>
+      <div className='form-div'>
+        {/* <figure class="form-shape">
+            <img src={animegirl} alt="anime girl" className="form-img" />
+        </figure> */}
       <form className="submit-message-form" onSubmit={this.handleSubmit}>
-        <label>
-          User:
-          <input type="text" name="user" value={this.state.user} onChange={this.handleChange} />
-        </label><br/>
-        <label>
-          Message:
-          <input type="text" name="text" value={this.state.text} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
+        <div className="form-group">
+          <input className='form-input' type="text" name="user" value={this.state.user} onChange={this.handleChange} placeholder="Username" required/>
+          <label className='form-label'> User </label>
+        </div>
+        <div className='form-group'>
+          <input className='form-input' type="text" name="text" value={this.state.text} onChange={this.handleChange} placeholder="Message" required/>
+          <label className='form-label'> Message </label>
+        </div>
+        <input className='submit-btn' type="submit" value="Submit" />
     </form>
   
-    </>
+    </div>
     )
   }
 }
