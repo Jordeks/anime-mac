@@ -120,7 +120,7 @@ html {
     color: #212121;
     background-image: url(./img/so-white.png);
     height: 50rem;
-    width: 100%; 
+    width: auto; 
     border: 2px solid #757575;
   }
 
@@ -139,7 +139,7 @@ html {
 
   .submit-message-form {
     background-image: linear-gradient(to right bottom, rgba(230, 74, 25, 0.7), rgba(255, 204, 188, 0.7));
-    width: 83.4%;
+    width: auto;
     padding: 6rem; 
     color: #757575;
   }
@@ -186,6 +186,4 @@ html {
         transform: translateY(-4rem);
   }
 
-  .btn-medium {
-
-  }
+ 
