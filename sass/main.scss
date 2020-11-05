@@ -1,0 +1,185 @@
+$primary-color-dark: #E64A19;
+$primary-color-light: #FFCCBC;
+$primary-color: #FF5722;
+$color-white: #FFFFFF;
+$accent-color: #FF9800;
+$color-black: #212121;
+$color-dark-gray: #757575;
+$color-light-gray: #BDBDBD;
+
+
+body {
+    margin: 0;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-weight: 400;
+    /* line-height: 1.7; */
+    color: $color-white;
+    padding: 2rem;
+}
+  
+  /* 
+  
+  FONT 400,500,600,700
+  */
+  
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+  }
+  
+  html {
+    font-size: 62.5%; 
+  }
+  
+   .nav-btn{ 
+    border-radius: 1.5rem;
+    border: none; 
+    padding: 0rem 1.5rem;
+    margin: 1rem; 
+    background-color: $primary-color-dark;
+    color: $color-white;
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-decoration: none;
+   }
+  
+   .nav-btn:hover {
+    background-color: $primary-color;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .40);
+    transform: translateY(-2px);
+   }
+  
+   .nav-btn:active {
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.25);
+    transform: translateY(0);
+   }
+  
+    .home-div {
+      background-image: linear-gradient(to right bottom, rgba($primary-color-dark, 0.7), rgba($primary-color-light, 0.7)), url(./img/home-image.jpg);
+      background-size: cover;
+      position: relative;
+      height: 95vh;
+    }
+  
+    .title-div {
+      font-size: 5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: $color-white;
+      text-transform: lowercase;
+    }
+  
+    .jumbotron {
+      margin-top: 10rem
+    }
+  
+    .jumbotron-primary {
+      font-size: 2rem; 
+      letter-spacing: 2px;
+    }
+  
+    .jumbotron-secondary {
+      font-size: 1.5rem; 
+      letter-spacing: 1.5px;
+    }
+  
+    .jumbotron-tertiary {
+      font-size: 1.5rem; 
+      letter-spacing: 1.5px;
+    }
+  
+    .form-textarea {
+      width: 50%;
+    }
+  
+    .submit-btn{ 
+      border-radius: 1.5rem;
+      border: none;
+      margin-left: 1rem;
+      padding: 0rem 1.5rem;
+      background-color: $primary-color-dark;
+      color: $color-white;
+      font-family: 'Baloo Tammudu 2', cursive;
+      outline: none;
+     }
+    
+  
+    .messages-div {
+      color: $color-dark-gray;
+      font-size: 1.25rem;
+    }
+  
+    .message-list {
+      list-style: none;
+      color: $color-black;
+      background-image: url(./img/so-white.png);
+      height: 50rem;
+      width: auto; 
+      border: 2px solid $color-dark-gray;
+    }
+  
+    .form-div {
+      
+      
+    }
+  
+    .form-shape {
+      width: 15rem; 
+      height: 15rem; 
+      float: right; 
+      position: relative;
+    }
+  
+  
+    .submit-message-form {
+      background-image: linear-gradient(to right bottom, rgba($primary-color-dark, 0.7), rgba($primary-color-light, 0.7));
+      width: auto;
+      padding: 6rem; 
+      color: $color-dark-gray;
+    }
+  
+  
+    .form-group:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  
+    .form-input {
+          /* font-size: 1.5rem; */
+          font-family: inherit;
+          color: inherit;
+          /* padding: .5rem 1rem; */
+          border-radius: 2px;
+          /* background-color: rgba(, .5); */
+          border: none; 
+          border-bottom: 3px solid transparent;
+          width: 95%; 
+          display: block;
+    }
+  
+    .form-input:focus {
+      outline: none; 
+      box-shadow: 0 1rem 2rem rgba(33, 33, 33, 0.25);
+      border-bottom: 3px solid $accent-color; 
+    }
+  
+    .form-input:focus:invalid {
+      border-bottom: 3px solid $primary-color; 
+    }
+  
+    .form-label {
+      font-size: 1.2rem; 
+      font-weight: 700;
+      margin-top: .7rem;
+      display: block;
+      transition: all, .3s;
+    }
+  
+    .form-input:placeholder-shown + .form-label {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-4rem);
+    }
+  
