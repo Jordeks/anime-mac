@@ -6,6 +6,7 @@ import {
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import MessageContainer from './containers/MessageContainer';
+import FanArtContainer from './containers/FanArtContainer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <NavBar />
           <Route exact path="/" component={Home} />
           <Route exact path="/messages" component={MessageContainer} />
+          <Route exact path="/fanart" component={FanArtContainer} />
         </div>
       </Router>
     </div>
