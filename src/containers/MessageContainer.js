@@ -7,23 +7,13 @@ import { v4 as uuidv4 } from 'uuid';
 export default class MessageContainer extends Component {
 
   state = {
-    messages: [
-      {
-        id: 1,
-        username: "cowboybeeboop",
-        text: "Cowboy BeeBop is the best. Fight me."
-      },
-      {
-        id: 2,
-        username: "avatar4eva",
-        text: "Rewatching avatar for the millionth time"
-      },
-      {
-        id: 3,
-        username: "sw0rdart0nlyn",
-        text: "hey wanna buy some sw0rd art"
-      }
-    ]
+    messages: []
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:3000/messages')
+      .then(response => response.json())
+      .then(data => this.setState({messages: data }));
   }
 
   addMessage = (message) => {
