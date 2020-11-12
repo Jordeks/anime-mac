@@ -10,17 +10,17 @@ export default class MessageContainer extends Component {
     messages: [
       {
         id: 1,
-        user: "cowboybeeboop",
+        username: "cowboybeeboop",
         text: "Cowboy BeeBop is the best. Fight me."
       },
       {
         id: 2,
-        user: "avatar4eva",
+        username: "avatar4eva",
         text: "Rewatching avatar for the millionth time"
       },
       {
         id: 3,
-        user: "sw0rdart0nlyn",
+        username: "sw0rdart0nlyn",
         text: "hey wanna buy some sw0rd art"
       }
     ]

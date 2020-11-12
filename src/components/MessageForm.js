@@ -4,7 +4,7 @@ import animegirl from "../img/animegirl.jpg"
 export default class MessageForm extends Component {
 
  state = {
-      user: '',
+      username: '',
       text: '',
     }
   
@@ -18,7 +18,7 @@ export default class MessageForm extends Component {
     event.preventDefault()
     this.props.addMessage(this.state)
     this.setState({
-      user: '',
+      username: '',
       text: ''
     })
   }
@@ -31,8 +31,8 @@ export default class MessageForm extends Component {
         </figure> */}
       <form className="submit-message-form" onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <input className='form-input' type="text" name="user" value={this.state.user} onChange={this.handleChange} placeholder="Username" required/>
-          <label className='form-label'> User </label>
+          <input className='form-input' type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/>
+          <label className='form-label'> Username </label>
         </div>
         <div className='form-group'>
           <input className='form-input' type="text" name="text" value={this.state.text} onChange={this.handleChange} placeholder="Message" required/>
