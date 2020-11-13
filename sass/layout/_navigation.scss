@@ -1,0 +1,26 @@
+.navbar {
+    padding-top: .5rem; 
+
+    &__btn{ 
+        border-radius: 1.5rem;
+        border: none; 
+        padding: 0rem 1.5rem;
+        margin: 1rem; 
+        background-color: $primary-color-dark;
+        color: $color-white;
+        font-family: 'Baloo Tammudu 2', cursive;
+        text-decoration: none;
+       }
+      
+       &__btn:hover {
+        background-color: $primary-color;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .40);
+        transform: translateY(-2px);
+       }
+      
+       &__btn:active {
+        box-shadow: 0 1rem 1rem rgba($color-black, 0.25);
+        transform: translateY(0);
+       }
+}

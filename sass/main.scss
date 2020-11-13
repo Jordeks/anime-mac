@@ -1,95 +1,29 @@
-$primary-color-dark: #E64A19;
-$primary-color-light: #FFCCBC;
-$primary-color: #FF5722;
-$color-white: #FFFFFF;
-$accent-color: #FF9800;
-$color-black: #212121;
-$color-dark-gray: #757575;
-$color-light-gray: #BDBDBD;
 
+@import "abstracts/variables";
 
-body {
-    margin: 0;
-    font-family: 'Baloo Tammudu 2', cursive;
-    font-weight: 400;
-    /* line-height: 1.7; */
-    color: $primary-color-light;
-    padding: 2rem;
-}
-   
-  /* 
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";
+
+    // .jumbotron-primary {
+    //   font-size: 2rem; 
+    //   letter-spacing: 2px;
+    // }
   
-  FONT 400,500,600,700
-  */
+    // .jumbotron-secondary {
+    //   font-size: 1.5rem; 
+    //   letter-spacing: 1.5px;
+    // }
   
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit; 
-  }
-  
-  html {
-    font-size: 62.5%; 
-  }
-  
-   .nav-btn{ 
-    border-radius: 1.5rem;
-    border: none; 
-    padding: 0rem 1.5rem;
-    margin: 1rem; 
-    background-color: $primary-color-dark;
-    color: $color-white;
-    font-family: 'Baloo Tammudu 2', cursive;
-    text-decoration: none;
-   }
-  
-   .nav-btn:hover {
-    background-color: $primary-color;
-    color: $color-white;
-    box-shadow: 0 1rem 2rem rgba($color-black, .40);
-    transform: translateY(-2px);
-   }
-  
-   .nav-btn:active {
-    box-shadow: 0 1rem 1rem rgba($color-black, 0.25);
-    transform: translateY(0);
-   }
-  
-    .home-div {
-      background-image: linear-gradient(to right bottom, rgba($primary-color-dark, 0.7), rgba($primary-color-light, 0.7)), url(./img/home-image.jpg);
-      background-size: cover;
-      position: relative;
-      height: 95vh;
-    }
-  
-    .title-div {
-      font-size: 5rem;
-      font-weight: 700;
-      margin-bottom: 3rem;
-      color: $color-white;
-      text-transform: lowercase;
-    }
-  
-    .jumbotron {
-      margin-top: 10rem
-    }
-  
-    .jumbotron-primary {
-      font-size: 2rem; 
-      letter-spacing: 2px;
-    }
-  
-    .jumbotron-secondary {
-      font-size: 1.5rem; 
-      letter-spacing: 1.5px;
-    }
-  
-    .jumbotron-tertiary {
-      font-size: 1.5rem; 
-      letter-spacing: 1.5px;
-    }
+    // .jumbotron-tertiary {
+    //   font-size: 1.5rem; 
+    //   letter-spacing: 1.5px;
+    // }
   
     .form-textarea {
       width: 50%;
@@ -121,10 +55,10 @@ body {
       border: 2px solid $color-dark-gray;
     }
   
-    .form-div {
+    // .form-div {
       
       
-    }
+    // }
   
     .form-shape {
       width: 15rem; 

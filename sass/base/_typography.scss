@@ -1,0 +1,38 @@
+ /* 
+  FONT 400,500,600,700
+  */
+
+
+body {
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-weight: 400;
+    line-height: 1.7; 
+    color: $primary-color-light;
+}
+
+.header {
+    &__title {
+      font-size: 7rem;
+      font-weight: 700;
+      color: $color-white;
+      text-transform: lowercase;
+    }
+}
+
+.heading-primary {
+    color: $color-white; 
+    text-transform: lowercase;
+    backface-visibility: hidden;
+
+    &--main {
+        display: block;
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    &--sub {
+        display: block; 
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
