@@ -8,7 +8,7 @@ export default class MessageContainer extends Component {
   state = {
     messages: []
   }
-///makeing change to test git
+  
   componentDidMount(){
     fetch('http://localhost:3000/messages')
       .then(response => response.json())
