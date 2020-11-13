@@ -25,21 +25,23 @@ export default class MessageForm extends Component {
 
   render() {
     return (
-      <div className='form-div'>
-        {/* <figure class="form-shape">
-            <img src={animegirl} alt="anime girl" className="form-img" />
-        </figure> */}
-      <form className="submit-message-form" onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <input className='form-input' type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/>
-          <label className='form-label'> Username </label>
+      <div className='form'>
+        <div class="u-margin-bottom-small">
+            <h2 class="heading-secondary">
+                Anime-niac Chat
+            </h2>
         </div>
-        <div className='form-group'>
-          <input className='form-input' type="text" name="text" value={this.state.text} onChange={this.handleChange} placeholder="Message" required/>
-          <label className='form-label'> Message </label>
-        </div>
-        <input className='submit-btn' type="submit" value="Submit" />
-    </form>
+        <form className="submit-message-form" onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <input className='form-input' type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/>
+              <label className='form-label'> Username </label>
+            </div>
+            <div className='form-group'>
+              <input className='form-input' type="text" name="text" value={this.state.text} onChange={this.handleChange} placeholder="Message" required/>
+              <label className='form-label'> Message </label>
+            </div>
+            <input className='btn-primary' type="submit" value="Submit" />
+        </form>
   
     </div>
     )

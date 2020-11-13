@@ -1,3 +1,48 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -25,7 +70,8 @@ body {
   font-size: 7rem;
   font-weight: 700;
   color: #FFFFFF;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  animation: moveInBottom 1s ease-out; }
 
 .heading-primary {
   color: #FFFFFF;
@@ -39,6 +85,26 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: lowercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #FFCCBC, #E64A19);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+  .heading-secondary:hover {
+    transform: skewY(-1.5deg) skewX(12deg) scale(1);
+    text-shadow: 0.5rem 1rem 2rem rgba(33, 33, 33, 0.2); }
 
 .u-center-text {
   text-align: center !important; }
@@ -57,6 +123,56 @@ body {
 
 .u-margin-top-huge {
   margin-bottom: 10rem !important; }
+
+.btn-primary {
+  border-radius: 1.5rem;
+  border: none;
+  margin-left: 1rem;
+  padding: 0rem 1.5rem;
+  background-color: #E64A19;
+  color: #FFFFFF;
+  font-family: 'Baloo Tammudu 2', cursive;
+  outline: none; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
   height: 85vh;
@@ -96,16 +212,6 @@ body {
 
 .form-textarea {
   width: 50%; }
-
-.submit-btn {
-  border-radius: 1.5rem;
-  border: none;
-  margin-left: 1rem;
-  padding: 0rem 1.5rem;
-  background-color: #E64A19;
-  color: #FFFFFF;
-  font-family: 'Baloo Tammudu 2', cursive;
-  outline: none; }
 
 .messages-div {
   color: #757575;

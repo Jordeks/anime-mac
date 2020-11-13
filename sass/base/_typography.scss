@@ -16,6 +16,7 @@ body {
       font-weight: 700;
       color: $color-white;
       text-transform: lowercase;
+      animation: moveInBottom 1s ease-out;
     }
 }
 
@@ -34,5 +35,30 @@ body {
         display: block; 
         font-size: 2rem;
         font-weight: 700;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: lowercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+
+    &:hover {
+        transform: skewY(-1.5deg) skewX(12deg) scale(1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
 }

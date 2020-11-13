@@ -4,9 +4,9 @@ import JumbotronContent from './JumbotronContent'
 export default class Jumbotron extends Component {
     render() {
         return (
-            <div className='section-features'>
+            <section className='section-features'>
                 <JumbotronContent />
-            </div>
+            </section>
         )
     }
 }
