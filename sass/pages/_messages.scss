@@ -1,0 +1,13 @@
+.messages {
+    color: $color-dark-gray;
+    font-size: 1.25rem;
+
+    &__list {
+        list-style: none;
+        color: $color-black;
+        background-image: url(./img/so-white.png);
+        height: 50rem;
+        width: auto; 
+        border: 2px solid $color-dark-gray;
+      }
+}

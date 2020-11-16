@@ -25,25 +25,26 @@ export default class MessageForm extends Component {
 
   render() {
     return (
-      <div className='form'>
-        <div class="u-margin-bottom-small">
-            <h2 class="heading-secondary">
-                Anime-niac Chat
-            </h2>
-        </div>
-        <form className="submit-message-form" onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <input className='form-input' type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/>
-              <label className='form-label'> Username </label>
+      // <div className=''>
+      //   <div className="u-margin-bottom-small">
+      //       <h2 className="heading-secondary">
+      //           Anime-niac Chat
+      //       </h2>
+      //   </div>
+      <div>
+        <form className="form" onSubmit={this.handleSubmit}>
+            <div className="form__group">
+              <input className='form__input' type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/>
+              <label className='form__label'> Username </label>
             </div>
-            <div className='form-group'>
-              <input className='form-input' type="text" name="text" value={this.state.text} onChange={this.handleChange} placeholder="Message" required/>
-              <label className='form-label'> Message </label>
+            <div className='form__group'>
+              <input className='form__input' type="text" name="text" value={this.state.text} onChange={this.handleChange} placeholder="Message" required/>
+              <label className='form__label'> Message </label>
             </div>
             <input className='btn-primary' type="submit" value="Submit" />
         </form>
   
-    </div>
+      </div>
     )
   }
 }

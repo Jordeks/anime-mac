@@ -32,22 +32,22 @@ export default class FanArtForm extends Component {
 
   render() {
     return (
-      <div className='form-div'>
-      <form className="submit-message-form" onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <input className='form-input' type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/>
-          <label className='form-label'> Username </label>
-        </div>
-        <div className='form-group'>
-          <input className='form-input' type="text" name="title" value={this.state.title} onChange={this.handleChange} placeholder="Title" required/>
-          <label className='form-label'> Title </label>
-        </div>
-        <div className='form-group'>
-          <input className='form-input' type="text" name="url" value={this.state.url} onChange={this.handleChange} placeholder="Fan art Url" required/>
-          <label className='form-label'> Fan art Url </label>
-        </div>
-        <input className='submit-btn' type="submit" value="Submit" />
-    </form>
+      <div className='fanart-form'>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="form__group">
+            <input className='form__input' type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/>
+            <label className='form__label'> Username </label>
+          </div>
+          <div className='form__group'>
+            <input className='form__input' type="text" name="title" value={this.state.title} onChange={this.handleChange} placeholder="Title" required/>
+            <label className='form__label'> Title </label>
+          </div>
+          <div className='form__group'>
+            <input className='form__input' type="text" name="url" value={this.state.url} onChange={this.handleChange} placeholder="Fan art Url" required/>
+            <label className='form__label'> Fan art Url </label>
+          </div>
+          <input className='submit-btn' type="submit" value="Submit" />
+        </form>
   
     </div>
     )

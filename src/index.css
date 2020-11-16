@@ -132,7 +132,56 @@ body {
   background-color: #E64A19;
   color: #FFFFFF;
   font-family: 'Baloo Tammudu 2', cursive;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
+  .btn-primary:hover {
+    background-color: #FF5722;
+    color: #FFFFFF;
+    box-shadow: 0 1rem 2rem rgba(33, 33, 33, 0.4);
+    transform: translateY(-2px); }
+  .btn-primary:active {
+    box-shadow: 0 1rem 1rem rgba(33, 33, 33, 0.25);
+    transform: translateY(0); }
+
+.fan-art-card {
+  background-color: #757575; }
+  .fan-art-card__img {
+    width: 75vw; }
+
+.form {
+  background-image: linear-gradient(to right bottom, rgba(230, 74, 25, 0.7), rgba(255, 204, 188, 0.7));
+  width: auto;
+  padding: 6rem;
+  color: #757575; }
+  .form__group:not(:last-child) {
+    margin-bottom: 1rem; }
+  .form__input {
+    /* font-size: 1.5rem; */
+    font-family: inherit;
+    color: inherit;
+    /* padding: .5rem 1rem; */
+    border-radius: 2px;
+    /* background-color: rgba(, .5); */
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 95%;
+    display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(33, 33, 33, 0.25);
+    border-bottom: 3px solid #FF9800; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #FF5722; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: .7rem;
+    display: block;
+    transition: all, .3s; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
 
 .row {
   max-width: 114rem;
@@ -210,69 +259,13 @@ body {
 .section-features {
   background-color: #eee; }
 
-.form-textarea {
-  width: 50%; }
-
-.messages-div {
+.messages {
   color: #757575;
   font-size: 1.25rem; }
-
-.message-list {
-  list-style: none;
-  color: #212121;
-  background-image: url(./img/so-white.png);
-  height: 50rem;
-  width: auto;
-  border: 2px solid #757575; }
-
-.form-shape {
-  width: 15rem;
-  height: 15rem;
-  float: right;
-  position: relative; }
-
-.submit-message-form {
-  background-image: linear-gradient(to right bottom, rgba(230, 74, 25, 0.7), rgba(255, 204, 188, 0.7));
-  width: auto;
-  padding: 6rem;
-  color: #757575; }
-
-.form-group:not(:last-child) {
-  margin-bottom: 1rem; }
-
-.form-input {
-  /* font-size: 1.5rem; */
-  font-family: inherit;
-  color: inherit;
-  /* padding: .5rem 1rem; */
-  border-radius: 2px;
-  /* background-color: rgba(, .5); */
-  border: none;
-  border-bottom: 3px solid transparent;
-  width: 95%;
-  display: block; }
-
-.form-input:focus {
-  outline: none;
-  box-shadow: 0 1rem 2rem rgba(33, 33, 33, 0.25);
-  border-bottom: 3px solid #FF9800; }
-
-.form-input:focus:invalid {
-  border-bottom: 3px solid #FF5722; }
-
-.form-label {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-top: .7rem;
-  display: block;
-  transition: all, .3s; }
-
-.form-input:placeholder-shown + .form-label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem); }
-
-.fan-art-card {
-  background-color: #757575; }
-  .fan-art-card__img {
-    width: 75vw; }
+  .messages__list {
+    list-style: none;
+    color: #212121;
+    background-image: url(./img/so-white.png);
+    height: 50rem;
+    width: auto;
+    border: 2px solid #757575; }

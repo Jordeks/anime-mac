@@ -7,6 +7,7 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/card";
 @import "components/form";
 
 @import "layout/grid";
@@ -14,88 +15,9 @@
 @import "layout/navigation";
 
 @import "pages/home";
+@import "pages/messages";
+@import "pages/fanart";
 
   
-    .form-textarea {
-      width: 50%;
-    }
-  
-    .messages-div {
-      color: $color-dark-gray;
-      font-size: 1.25rem;
-    }
-  
-    .message-list {
-      list-style: none;
-      color: $color-black;
-      background-image: url(./img/so-white.png);
-      height: 50rem;
-      width: auto; 
-      border: 2px solid $color-dark-gray;
-    }
-  
-    .form-shape {
-      width: 15rem; 
-      height: 15rem; 
-      float: right; 
-      position: relative;
-    }
-  
-  
-    .submit-message-form {
-      background-image: linear-gradient(to right bottom, rgba($primary-color-dark, 0.7), rgba($primary-color-light, 0.7));
-      width: auto;
-      padding: 6rem; 
-      color: $color-dark-gray;
-    }
-  
-  
-    .form-group:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-  
-    .form-input {
-          /* font-size: 1.5rem; */
-          font-family: inherit;
-          color: inherit;
-          /* padding: .5rem 1rem; */
-          border-radius: 2px;
-          /* background-color: rgba(, .5); */
-          border: none; 
-          border-bottom: 3px solid transparent;
-          width: 95%; 
-          display: block;
-    }
-  
-    .form-input:focus {
-      outline: none; 
-      box-shadow: 0 1rem 2rem rgba(33, 33, 33, 0.25);
-      border-bottom: 3px solid $accent-color; 
-    }
-  
-    .form-input:focus:invalid {
-      border-bottom: 3px solid $primary-color; 
-    }
-  
-    .form-label {
-      font-size: 1.2rem; 
-      font-weight: 700;
-      margin-top: .7rem;
-      display: block;
-      transition: all, .3s;
-    }
-  
-    .form-input:placeholder-shown + .form-label {
-          opacity: 0;
-          visibility: hidden;
-          transform: translateY(-4rem);
-    }
-
-    .fan-art-card {
-      background-color: $color-dark-gray;
-
-      &__img {
-        width: 75vw;
-      }
-    }
+    
   
