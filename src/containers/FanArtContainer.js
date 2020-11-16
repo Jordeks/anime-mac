@@ -5,7 +5,7 @@ import FanArtForm from '../components/FanArtForm'
 export default class FanArtContainer extends Component {
 
     state = {
-        fanarts: []
+        fanarts: [],
       }
 
       componentDidMount(){
@@ -26,11 +26,28 @@ export default class FanArtContainer extends Component {
         .then(newArt => this.setState({fanarts: [...this.state.fanarts, newArt]}))
       }
 
+      editFanArt = (fanArt, id) => {
+        fetch(`http://localhost:3000/fanarts/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(fanArt),
+        })
+        .then(response => response.json())
+        .then(updatedArt => {
+          const array = this.state.fanarts.filter(art => art.id !== updatedArt.id)
+          this.setState({fanarts: [...array, updatedArt]})
+        })
+      }
+
+  
+
     render() {
         return (
             <div>
-                <FanArtList fanarts={this.state.fanarts}/>
-                <FanArtForm addFanArt={this.addFanArt}/>
+                <FanArtList fanarts={this.state.fanarts} addFanArt={this.addFanArt} editFanArt={this.editFanArt} />
+                <FanArtForm addFanArt={this.addFanArt} editFanArt={this.editFanArt}/>
             </div>
         )
     }

@@ -3,10 +3,11 @@ import React, { Component } from 'react'
 export default class FanArtForm extends Component {
 
  state = {
-      username: '',
-      title: '',
-      url: '', 
+      username: this.props.username || '',
+      title: this.props.title || '',
+      url: this.props.url || '', 
     }
+  
   
 
   handleChange = event => {
@@ -16,7 +17,12 @@ export default class FanArtForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.addFanArt(this.state)
+    if (this.props.fanArt.id) {
+      this.props.editFanArt(this.state, this.props.fanArt.id)
+      this.props.formToggle()
+    } else {
+      this.props.addFanArt(this.state)
+    }
     this.setState({
       username: '',
       title: '',
