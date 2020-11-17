@@ -3,12 +3,19 @@ import React, { Component } from 'react'
 export default class FanArtForm extends Component {
 
  state = {
-      username: this.props.username || '',
-      title: this.props.title || '',
-      url: this.props.url || '', 
+      username: this.props.fanArt ? this.props.fanArt.username : '',
+      title: this.props.fanArt ? this.props.fanArt.title : '',
+      url: this.props.fanArt ? this.props.fanArt.url : '', 
     }
   
-  
+  // componentDidUpdate(prevProps, prevState){
+  //   console.log("previous:", prevProps, "current", this.props)
+  //   this.setState({
+  //     username: this.props.username,
+  //     title: this.props.title,
+  //     url: this.props.url 
+  //   })
+  // }
 
   handleChange = event => {
     const {name, value} = event.target
@@ -30,7 +37,16 @@ export default class FanArtForm extends Component {
     })
   }
 
+  // componentDidMount() {
+  //   this.setState({
+  //     username: this.props.fanArt.username,
+  //     title: this.props.fanArt.title,
+  //     url: this.props.fanArt.url 
+  //   })
+  // }
+
   render() {
+    console.log(this.props, this.state)
     return (
       <div className='fanart-form'>
         <form className="form" onSubmit={this.handleSubmit}>

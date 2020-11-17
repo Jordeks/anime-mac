@@ -16,6 +16,7 @@ export default class FanArtCard extends Component {
     }
 
     render() {
+        console.log(this.props)
         return (
             <div className='fan-art-card u-margin-bottom-medium'>
                 <h4 className="fan-art-card__title">{this.props.title}</h4>
