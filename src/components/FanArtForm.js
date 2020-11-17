@@ -24,7 +24,7 @@ export default class FanArtForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    if (this.props.fanArt.id) {
+    if (this.props.fanArt) {
       this.props.editFanArt(this.state, this.props.fanArt.id)
       this.props.formToggle()
     } else {
